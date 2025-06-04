@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Voortgang Informatica</title>
+</head>
+<body>
+    <h1>Voortgang Informatica</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('add_student') }}">Student toevoegen</a> |
+        <a href="{{ url_for('add_progress') }}">Voortgang toevoegen</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
