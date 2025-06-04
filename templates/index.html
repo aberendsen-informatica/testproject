@@ -10,6 +10,19 @@
             <li>{{ p }}</li>
             {% endfor %}
         </ul>
+        <h4>Modules</h4>
+        <ul>
+            {% for m in modules.get(name, []) %}
+            <li>
+                {{ m.module }} -
+                {% if m.status == 'done' %}
+                    afgerond op {{ m.date }}
+                {% else %}
+                    bezig
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
     </li>
     {% endfor %}
 </ul>
