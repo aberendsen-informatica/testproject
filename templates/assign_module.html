@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Module koppelen aan student</h2>
+<form method="post">
+    <label>Student:</label>
+    <select name="student">
+        {% for s in students %}
+        <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Module:</label>
+    <select name="module">
+        {% for m in modules %}
+        <option value="{{ m }}">{{ m }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Opslaan">
+</form>
+{% endblock %}

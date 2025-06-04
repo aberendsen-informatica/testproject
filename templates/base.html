@@ -9,7 +9,10 @@
     <nav>
         <a href="{{ url_for('index') }}">Home</a> |
         <a href="{{ url_for('add_student') }}">Student toevoegen</a> |
-        <a href="{{ url_for('add_progress') }}">Voortgang toevoegen</a>
+        <a href="{{ url_for('add_progress') }}">Voortgang toevoegen</a> |
+        <a href="{{ url_for('add_module') }}">Module toevoegen</a> |
+        <a href="{{ url_for('assign_module_route') }}">Module koppelen</a> |
+        <a href="{{ url_for('complete_module_route') }}">Module afronden</a>
     </nav>
     <hr>
     {% block content %}{% endblock %}
