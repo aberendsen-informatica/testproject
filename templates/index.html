@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Overzicht Studenten</h2>
+<ul>
+    {% for name, progress in students.items() %}
+    <li>
+        <strong>{{ name }}</strong>
+        <ul>
+            {% for p in progress %}
+            <li>{{ p }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

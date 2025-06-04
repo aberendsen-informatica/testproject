@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Voortgang toevoegen</h2>
+<form method="post">
+    <label>Student:</label>
+    <select name="name">
+        {% for s in students %}
+        <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Beschrijving:</label>
+    <input type="text" name="progress" required>
+    <input type="submit" value="Opslaan">
+</form>
+{% endblock %}
